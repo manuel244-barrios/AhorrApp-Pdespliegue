@@ -5,6 +5,7 @@ import fs from 'fs';
 const hasLocalCertificates = fs.existsSync('certs/private.key') && fs.existsSync('certs/certificate.crt');
 
 export default defineConfig({
+  base: process.env.VITE_BASE_PATH || "/",
   plugins: [react()], 
   server: {
     host: `localhost`,

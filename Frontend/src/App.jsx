@@ -70,7 +70,7 @@ function App() {
     <AuthProvider>
       <ToastProvider>
         <NotificacionesProvider>
-          <BrowserRouter>
+          <BrowserRouter basename={import.meta.env.BASE_URL}>
             <Routes>
           {/* ========== RUTAS PÚBLICAS (sin sesión) ========== */}
           <Route path="/" element={<Index />} />
